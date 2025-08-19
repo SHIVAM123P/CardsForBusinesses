@@ -1,3 +1,4 @@
+
 import Header from '@/components/header';
 import Hero from '@/components/hero';
 import Portfolio from '@/components/portfolio';
@@ -15,7 +16,7 @@ export default function Home() {
         <main className="flex-1">
           <Hero />
           <Portfolio />
-          <AiTool />
+          {/* <AiTool /> */}
           <Contact />
         </main>
         <Footer />
