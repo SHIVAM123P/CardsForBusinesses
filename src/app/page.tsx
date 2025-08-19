@@ -4,8 +4,6 @@ import Portfolio from '@/components/portfolio';
 import AiTool from '@/components/ai-tool';
 import Contact from '@/components/contact';
 import Footer from '@/components/footer';
-import AiGenerators from '@/components/ai-generators';
-import Pricing from '@/components/pricing';
 
 export default function Home() {
   return (
@@ -17,9 +15,7 @@ export default function Home() {
         <main className="flex-1">
           <Hero />
           <Portfolio />
-          <Pricing />
           <AiTool />
-          <AiGenerators />
           <Contact />
         </main>
         <Footer />
