@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Palette, Bot, Briefcase, Send } from 'lucide-react';
+import { Palette, Bot, Briefcase, Send, IndianRupee } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function Header() {
@@ -13,6 +13,9 @@ export default function Header() {
         <nav className="hidden md:flex items-center space-x-6 text-lg">
           <Link href="#portfolio" className="font-medium text-muted-foreground transition-colors hover:text-primary">
             My Work
+          </Link>
+          <Link href="#pricing" className="font-medium text-muted-foreground transition-colors hover:text-primary">
+            Pricing
           </Link>
           <Link href="#ai-tool" className="font-medium text-muted-foreground transition-colors hover:text-primary">
             Design AI

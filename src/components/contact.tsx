@@ -38,6 +38,8 @@ export default function Contact() {
 
   function onSubmit(values: z.infer<typeof formSchema>) {
     console.log(values);
+    // In a real app, you would send this data to a server or email service.
+    // For now, we'll just show a success message.
     toast({
       title: "Message Sent!",
       description: "Thanks for reaching out! I'll get back to you soon.",
@@ -65,9 +67,9 @@ export default function Contact() {
                 <Phone className="w-6 h-6 text-accent group-hover:text-primary transition-colors" />
                 <span>+1 (234) 567-890</span>
               </a>
-              <a href="mailto:hello@cardfolio.com" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group">
+              <a href="mailto:betterdeveloperr@gmail.com" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group">
                 <Mail className="w-6 h-6 text-accent group-hover:text-primary transition-colors" />
-                <span>hello@cardfolio.com</span>
+                <span>betterdeveloperr@gmail.com</span>
               </a>
               <div className="flex items-center gap-4 text-muted-foreground group">
                 <MapPin className="w-6 h-6 text-accent group-hover:text-primary transition-colors" />
