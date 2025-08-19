@@ -13,7 +13,7 @@ const DesignRecommendationInputSchema = z.object({
 export type DesignRecommendationInput = z.infer<typeof DesignRecommendationInputSchema>;
 
 const DesignRecommendationOutputSchema = z.object({
-  designRecommendation: z.string().describe('The AI recommended business card design template based on the business description.'),
+  designRecommendation: z.string().describe('A business card design idea based on the business description.'),
 });
 export type DesignRecommendationOutput = z.infer<typeof DesignRecommendationOutputSchema>;
 
@@ -27,7 +27,7 @@ const designRecommendationPrompt = ai.definePrompt({
   name: 'designRecommendationPrompt',
   input: {schema: DesignRecommendationInputSchema},
   output: {schema: DesignRecommendationOutputSchema},
-  prompt: `You are an AI business card design assistant. Based on the business description, provide a business card design template recommendation. Return the design recommendation in the output field.
+  prompt: `You are an AI business card design assistant. Based on the business description, provide a creative business card design idea. For example, mention colors, fonts, and a general style.
 
 Business Description: {{{businessDescription}}}`,
 });

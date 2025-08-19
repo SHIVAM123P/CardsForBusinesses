@@ -34,10 +34,10 @@ export default function Portfolio() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-headline font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-            Curated Concepts
+            My Designs
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            A glimpse into the future of networking. Each design is a conversation starter.
+            Here are some examples of business cards I've designed.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">

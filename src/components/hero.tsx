@@ -7,24 +7,24 @@ export default function Hero() {
        <div className="container mx-auto px-4 z-10">
         <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter font-headline text-shadow-glow animate-text-reveal">
           <span className="text-transparent bg-clip-text bg-gradient-to-br from-gray-200 to-gray-500">
-            Designing
+            Stand Out With a
           </span>
-          <span className="text-transparent bg-clip-text bg-gradient-to-br from-primary to-accent"> Tomorrow's</span>
+          <span className="text-transparent bg-clip-text bg-gradient-to-br from-primary to-accent"> Custom</span>
           <br/>
           <span className="text-transparent bg-clip-text bg-gradient-to-br from-gray-200 to-gray-500">
-             First Impressions.
+             Business Card.
           </span>
         </h1>
         <p className="mt-8 max-w-3xl mx-auto text-lg md:text-xl text-muted-foreground animate-fade-in-up">
-          We craft visually stunning, futuristic business cards that transcend the ordinary.
-          Merge innovation with identity and make your introduction unforgettable.
+          I design modern, eye-catching business cards that make a great first impression.
+          Let's create a card that people will remember.
         </p>
         <div className="mt-12 flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up" style={{ animationDelay: "0.5s" }}>
           <Button asChild size="lg" variant="futuristic">
-            <Link href="#portfolio">Explore Designs</Link>
+            <Link href="#portfolio">See My Work</Link>
           </Button>
           <Button asChild size="lg" variant="outline">
-            <Link href="#contact">Start a Project</Link>
+            <Link href="#contact">Get a Quote</Link>
           </Button>
         </div>
       </div>

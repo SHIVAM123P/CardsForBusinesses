@@ -16,8 +16,8 @@ const orbitron = Orbitron({
 
 
 export const metadata: Metadata = {
-  title: 'Cardfolio | Futuristic Business Card Design',
-  description: 'Crafting the future of connection, one card at a time.',
+  title: 'Cardfolio | Modern Business Card Designs',
+  description: 'Stunning business card designs to make your business stand out.',
 };
 
 export default function RootLayout({

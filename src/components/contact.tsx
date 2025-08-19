@@ -40,7 +40,7 @@ export default function Contact() {
     console.log(values);
     toast({
       title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you shortly.",
+      description: "Thanks for reaching out! I'll get back to you soon.",
     });
     form.reset();
   }
@@ -50,16 +50,16 @@ export default function Contact() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-headline font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-            Start a Project
+            Get Your Own Card
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Ready to innovate? Reach out and let's create something extraordinary together.
+            Like what you see? Let's work together to create a card for your business.
           </p>
         </div>
 
         <div className="grid md:grid-cols-5 gap-10 items-start">
           <div className="md:col-span-2 space-y-8">
-            <h3 className="text-2xl font-headline text-primary">Contact Details</h3>
+            <h3 className="text-2xl font-headline text-primary">Contact Info</h3>
             <div className="space-y-6">
               <a href="tel:+1234567890" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group">
                 <Phone className="w-6 h-6 text-accent group-hover:text-primary transition-colors" />
@@ -78,7 +78,7 @@ export default function Contact() {
           <div className="md:col-span-3">
             <Card className="glassmorphism-card">
               <CardHeader>
-                <CardTitle className="font-headline text-2xl">Send a Transmission</CardTitle>
+                <CardTitle className="font-headline text-2xl">Send a Message</CardTitle>
               </CardHeader>
               <CardContent>
                 <Form {...form}>
@@ -90,7 +90,7 @@ export default function Contact() {
                         <FormItem>
                           <FormLabel className="text-foreground/80">Your Name</FormLabel>
                           <FormControl>
-                            <Input placeholder="John Doe" {...field} className="bg-transparent/20 border-white/20 focus:ring-accent" />
+                            <Input placeholder="What should I call you?" {...field} className="bg-transparent/20 border-white/20 focus:ring-accent" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -103,7 +103,7 @@ export default function Contact() {
                         <FormItem>
                           <FormLabel className="text-foreground/80">Your Email</FormLabel>
                           <FormControl>
-                            <Input placeholder="john.doe@example.com" {...field} className="bg-transparent/20 border-white/20 focus:ring-accent" />
+                            <Input placeholder="Where can I reach you?" {...field} className="bg-transparent/20 border-white/20 focus:ring-accent" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -117,7 +117,7 @@ export default function Contact() {
                           <FormLabel className="text-foreground/80">Your Message</FormLabel>
                           <FormControl>
                             <Textarea
-                              placeholder="Tell us about your next big idea..."
+                              placeholder="Tell me about your business and what you're looking for..."
                               className="bg-transparent/20 border-white/20 focus:ring-accent"
                               rows={5}
                               {...field}

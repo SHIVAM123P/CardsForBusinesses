@@ -11,7 +11,7 @@ export default function Footer() {
         <p className="text-sm">
           &copy; {new Date().getFullYear()} Cardfolio. All Rights Reserved.
         </p>
-         <p className="text-xs mt-2">Crafting the future of connection.</p>
+         <p className="text-xs mt-2">Designs to make your business memorable.</p>
       </div>
     </footer>
   );

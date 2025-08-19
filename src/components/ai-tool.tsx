@@ -65,10 +65,10 @@ export default function AiTool() {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-5xl font-headline font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
-            AI-Powered Design Bot
+            AI Design Idea Generator
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Describe your business and our AI will generate a unique card concept for you.
+            Not sure what you want? Describe your business and our AI will suggest a card design idea.
           </p>
         </div>
 
@@ -76,10 +76,10 @@ export default function AiTool() {
           <CardHeader>
             <CardTitle className="flex items-center gap-3 font-headline text-2xl">
               <Bot className="w-8 h-8 text-primary" />
-              Design Assistant v2.0
+              Your Design Assistant
             </CardTitle>
             <CardDescription className="text-muted-foreground/80">
-              Enter a description of your business to get a personalized design suggestion.
+              Tell me about your business, and I'll give you a design concept.
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -90,10 +90,10 @@ export default function AiTool() {
                   name="businessDescription"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel className="text-foreground/80">Your Business DNA</FormLabel>
+                      <FormLabel className="text-foreground/80">Your Business Description</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="e.g., A sleek, sustainable tech startup creating minimalist smart home devices."
+                          placeholder="e.g., A local coffee shop that serves artisanal coffee and pastries."
                           className="bg-transparent/20 border-white/20 focus:ring-accent"
                           rows={4}
                           {...field}
@@ -105,7 +105,7 @@ export default function AiTool() {
                 />
                 <Button type="submit" disabled={loading} variant="futuristic" size="lg" className="w-full sm:w-auto">
                   {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  {loading ? "Generating..." : "Generate Concept"}
+                  {loading ? "Generating Idea..." : "Get Idea"}
                 </Button>
               </form>
             </Form>

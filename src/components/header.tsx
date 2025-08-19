@@ -12,18 +12,18 @@ export default function Header() {
         </Link>
         <nav className="hidden md:flex items-center space-x-6 text-lg">
           <Link href="#portfolio" className="font-medium text-muted-foreground transition-colors hover:text-primary">
-            Portfolio
+            My Work
           </Link>
           <Link href="#ai-tool" className="font-medium text-muted-foreground transition-colors hover:text-primary">
-            AI Tool
+            Design AI
           </Link>
           <Link href="#contact" className="font-medium text-muted-foreground transition-colors hover:text-primary">
-            Contact
+            Contact Me
           </Link>
         </nav>
         <Button asChild variant="futuristic" className="hidden md:inline-flex">
             <Link href="#contact">
-              Get a Quote
+              Get Your Card
             </Link>
         </Button>
       </div>
