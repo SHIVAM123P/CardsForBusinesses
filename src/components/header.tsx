@@ -20,9 +20,9 @@ export default function Header() {
           <Link href="#portfolio" className="font-medium text-muted-foreground transition-colors hover:text-primary">
             My Work
           </Link>
-          <Link href="#ai-tool" className="font-medium text-muted-foreground transition-colors hover:text-primary">
+          {/* <Link href="#ai-tool" className="font-medium text-muted-foreground transition-colors hover:text-primary">
             Design AI
-          </Link>
+          </Link> */}
           <Link href="#contact" className="font-medium text-muted-foreground transition-colors hover:text-primary">
             Contact Me
           </Link>
