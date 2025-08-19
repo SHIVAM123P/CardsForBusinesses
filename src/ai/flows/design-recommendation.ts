@@ -8,7 +8,7 @@ import {z} from 'genkit';
 const DesignRecommendationInputSchema = z.object({
   businessDescription: z
     .string()
-    .describe('A description of the user\u2019s business or industry.'),
+    .describe('A description of the user’s business or industry.'),
 });
 export type DesignRecommendationInput = z.infer<typeof DesignRecommendationInputSchema>;
 

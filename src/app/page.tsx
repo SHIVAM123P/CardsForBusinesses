@@ -4,6 +4,7 @@ import Portfolio from '@/components/portfolio';
 import AiTool from '@/components/ai-tool';
 import Contact from '@/components/contact';
 import Footer from '@/components/footer';
+import AiGenerators from '@/components/ai-generators';
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
           <Hero />
           <Portfolio />
           <AiTool />
+          <AiGenerators />
           <Contact />
         </main>
         <Footer />
