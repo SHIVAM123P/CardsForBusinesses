@@ -61,24 +61,24 @@ export default function AiTool() {
   }
 
   return (
-    <section id="ai-tool" className="py-16 sm:py-24 bg-secondary">
+    <section id="ai-tool" className="py-20 sm:py-32">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">
-            Need a Design Idea?
+          <h2 className="text-3xl md:text-5xl font-headline font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+            AI-Powered Design Bot
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Use our AI-powered tool to get a business card design recommendation based on your industry.
+            Describe your business and our AI will generate a unique card concept for you.
           </p>
         </div>
 
-        <Card className="max-w-3xl mx-auto mt-10 shadow-lg">
+        <Card className="max-w-3xl mx-auto mt-12 glassmorphism-card">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2 font-headline">
-              <Bot className="w-6 h-6 text-primary" />
-              AI Design Assistant
+            <CardTitle className="flex items-center gap-3 font-headline text-2xl">
+              <Bot className="w-8 h-8 text-primary" />
+              Design Assistant v2.0
             </CardTitle>
-            <CardDescription>
+            <CardDescription className="text-muted-foreground/80">
               Enter a description of your business to get a personalized design suggestion.
             </CardDescription>
           </CardHeader>
@@ -90,11 +90,11 @@ export default function AiTool() {
                   name="businessDescription"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Business Description</FormLabel>
+                      <FormLabel className="text-foreground/80">Your Business DNA</FormLabel>
                       <FormControl>
                         <Textarea
-                          placeholder="e.g., A modern coffee shop focusing on artisanal beans and a cozy atmosphere."
-                          className="resize-none"
+                          placeholder="e.g., A sleek, sustainable tech startup creating minimalist smart home devices."
+                          className="bg-transparent/20 border-white/20 focus:ring-accent"
                           rows={4}
                           {...field}
                         />
@@ -103,17 +103,17 @@ export default function AiTool() {
                     </FormItem>
                   )}
                 />
-                <Button type="submit" disabled={loading} className="w-full sm:w-auto">
+                <Button type="submit" disabled={loading} variant="futuristic" size="lg" className="w-full sm:w-auto">
                   {loading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-                  {loading ? "Generating..." : "Get Recommendation"}
+                  {loading ? "Generating..." : "Generate Concept"}
                 </Button>
               </form>
             </Form>
 
             {recommendation && (
-              <div className="mt-8 border-t pt-6">
-                <h3 className="text-lg font-headline font-semibold text-primary">Our Suggestion:</h3>
-                <blockquote className="mt-4 border-l-4 border-accent pl-4 italic text-muted-foreground bg-background/50 p-4 rounded-r-lg">
+              <div className="mt-8 border-t border-white/10 pt-6">
+                <h3 className="text-xl font-headline font-semibold text-primary">AI Suggestion:</h3>
+                <blockquote className="mt-4 border-l-4 border-accent pl-4 italic text-muted-foreground bg-black/20 p-4 rounded-r-lg">
                   <Quote className="h-5 w-5 text-accent/80 mb-2" />
                   {recommendation}
                 </blockquote>

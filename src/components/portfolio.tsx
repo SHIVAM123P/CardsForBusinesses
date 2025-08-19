@@ -30,19 +30,23 @@ const portfolioItems = [
 
 export default function Portfolio() {
   return (
-    <section id="portfolio" className="py-16 sm:py-24 bg-background">
+    <section id="portfolio" className="py-20 sm:py-32">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary text-shadow-funky">
-            Our Masterpieces
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-headline font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+            Curated Concepts
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Browse through a selection of our finest business card designs. Each one tells a unique story.
+            A glimpse into the future of networking. Each design is a conversation starter.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 [perspective:1000px]">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {portfolioItems.map((item, index) => (
-            <Card key={index} className="overflow-hidden group animate-fade-in transition-all duration-500 hover:shadow-2xl hover:shadow-primary/30 [transform-style:preserve-3d] hover:[transform:rotateY(15deg)_rotateX(5deg)_scale(1.05)]">
+            <Card 
+              key={index}
+              className="group glassmorphism-card overflow-hidden transition-all duration-500 hover:border-primary/50 hover:shadow-primary/20 hover:-translate-y-2"
+              style={{ animation: `fade-in-up 0.5s ease-out ${index * 0.1}s forwards`, opacity: 0 }}
+            >
               <CardContent className="p-0">
                 <Image
                   src={item.src}
@@ -50,7 +54,7 @@ export default function Portfolio() {
                   width={600}
                   height={400}
                   data-ai-hint={item.hint}
-                  className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
                 />
               </CardContent>
             </Card>

@@ -1,28 +1,31 @@
 import Link from 'next/link';
-import { Palette } from 'lucide-react';
+import { Palette, Bot, Briefcase, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container mx-auto flex h-14 max-w-screen-2xl items-center justify-between px-4">
+    <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-background/50 backdrop-blur-lg">
+      <div className="container mx-auto flex h-20 max-w-screen-xl items-center justify-between px-4">
         <Link href="/" className="flex items-center space-x-2">
-          <Palette className="h-6 w-6 text-primary" />
-          <span className="font-bold font-headline text-lg text-primary">Cardfolio</span>
+          <Palette className="h-8 w-8 text-primary" />
+          <span className="font-bold font-headline text-2xl text-foreground">Cardfolio</span>
         </Link>
-        <nav className="flex items-center space-x-4">
-          <Link href="#portfolio" className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary hidden sm:inline-block">
-            Our Work
+        <nav className="hidden md:flex items-center space-x-6 text-lg">
+          <Link href="#portfolio" className="font-medium text-muted-foreground transition-colors hover:text-primary">
+            Portfolio
           </Link>
-          <Link href="#ai-tool" className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary hidden sm:inline-block">
+          <Link href="#ai-tool" className="font-medium text-muted-foreground transition-colors hover:text-primary">
             AI Tool
           </Link>
-          <Button asChild>
-            <Link href="#contact">
-              Contact Us
-            </Link>
-          </Button>
+          <Link href="#contact" className="font-medium text-muted-foreground transition-colors hover:text-primary">
+            Contact
+          </Link>
         </nav>
+        <Button asChild variant="futuristic" className="hidden md:inline-flex">
+            <Link href="#contact">
+              Get a Quote
+            </Link>
+        </Button>
       </div>
     </header>
   );

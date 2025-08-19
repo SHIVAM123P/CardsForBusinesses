@@ -46,42 +46,39 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-16 sm:py-24 bg-background">
+    <section id="contact" className="py-20 sm:py-32">
       <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-headline font-bold text-primary">
-            Get in Touch
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <h2 className="text-3xl md:text-5xl font-headline font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">
+            Start a Project
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Have a project in mind or want to learn more? We'd love to hear from you.
+            Ready to innovate? Reach out and let's create something extraordinary together.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-5 gap-10">
-          <div className="md:col-span-2 space-y-6">
-            <h3 className="text-2xl font-headline text-primary">Contact Information</h3>
-            <p className="text-muted-foreground">
-              Fill out the form and our team will get back to you within 24 hours.
-            </p>
-            <div className="space-y-4">
-              <a href="tel:+1234567890" className="flex items-center gap-3 text-accent hover:text-primary transition-colors">
-                <Phone className="w-5 h-5" />
+        <div className="grid md:grid-cols-5 gap-10 items-start">
+          <div className="md:col-span-2 space-y-8">
+            <h3 className="text-2xl font-headline text-primary">Contact Details</h3>
+            <div className="space-y-6">
+              <a href="tel:+1234567890" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group">
+                <Phone className="w-6 h-6 text-accent group-hover:text-primary transition-colors" />
                 <span>+1 (234) 567-890</span>
               </a>
-              <a href="mailto:hello@cardfolio.com" className="flex items-center gap-3 text-accent hover:text-primary transition-colors">
-                <Mail className="w-5 h-5" />
+              <a href="mailto:hello@cardfolio.com" className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors group">
+                <Mail className="w-6 h-6 text-accent group-hover:text-primary transition-colors" />
                 <span>hello@cardfolio.com</span>
               </a>
-              <div className="flex items-center gap-3 text-accent">
-                <MapPin className="w-5 h-5" />
+              <div className="flex items-center gap-4 text-muted-foreground group">
+                <MapPin className="w-6 h-6 text-accent group-hover:text-primary transition-colors" />
                 <span>123 Design St, Creative City</span>
               </div>
             </div>
           </div>
           <div className="md:col-span-3">
-            <Card className="shadow-lg">
+            <Card className="glassmorphism-card">
               <CardHeader>
-                <CardTitle className="font-headline">Send us a Message</CardTitle>
+                <CardTitle className="font-headline text-2xl">Send a Transmission</CardTitle>
               </CardHeader>
               <CardContent>
                 <Form {...form}>
@@ -91,9 +88,9 @@ export default function Contact() {
                       name="name"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Your Name</FormLabel>
+                          <FormLabel className="text-foreground/80">Your Name</FormLabel>
                           <FormControl>
-                            <Input placeholder="John Doe" {...field} />
+                            <Input placeholder="John Doe" {...field} className="bg-transparent/20 border-white/20 focus:ring-accent" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -104,9 +101,9 @@ export default function Contact() {
                       name="email"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Your Email</FormLabel>
+                          <FormLabel className="text-foreground/80">Your Email</FormLabel>
                           <FormControl>
-                            <Input placeholder="john.doe@example.com" {...field} />
+                            <Input placeholder="john.doe@example.com" {...field} className="bg-transparent/20 border-white/20 focus:ring-accent" />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -117,11 +114,11 @@ export default function Contact() {
                       name="message"
                       render={({ field }) => (
                         <FormItem>
-                          <FormLabel>Your Message</FormLabel>
+                          <FormLabel className="text-foreground/80">Your Message</FormLabel>
                           <FormControl>
                             <Textarea
-                              placeholder="Tell us about your project..."
-                              className="resize-none"
+                              placeholder="Tell us about your next big idea..."
+                              className="bg-transparent/20 border-white/20 focus:ring-accent"
                               rows={5}
                               {...field}
                             />
@@ -130,7 +127,7 @@ export default function Contact() {
                         </FormItem>
                       )}
                     />
-                    <Button type="submit">Send Message</Button>
+                    <Button type="submit" variant="futuristic" size="lg">Send Message</Button>
                   </form>
                 </Form>
               </CardContent>

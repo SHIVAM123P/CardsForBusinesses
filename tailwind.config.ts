@@ -18,9 +18,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['PT Sans', 'sans-serif'],
-        headline: ['Playfair Display', 'serif'],
-        code: ['monospace'],
+        body: ['var(--font-inter)', 'sans-serif'],
+        headline: ['var(--font-orbitron)', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
@@ -69,40 +68,39 @@ export default {
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
       keyframes: {
         'accordion-down': {
-          from: {
-            height: '0',
-          },
-          to: {
-            height: 'var(--radix-accordion-content-height)',
-          },
+          from: { height: '0' },
+          to: { height: 'var(--radix-accordion-content-height)' },
         },
         'accordion-up': {
-          from: {
-            height: 'var(--radix-accordion-content-height)',
-          },
-          to: {
-            height: '0',
-          },
+          from: { height: 'var(--radix-accordion-content-height)' },
+          to: { height: '0' },
         },
-        'fade-in': {
-            '0%': { opacity: '0', transform: 'translateY(10px)' },
-            '100%': { opacity: '1', transform: 'translateY(0)' },
+        'fade-in-up': {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        'text-reveal': {
+          '0%': {
+            transform: 'translate(0, 100%)',
+          },
+          '100%': {
+            transform: 'translate(0, 0)',
+          },
         },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'fade-in': 'fade-in 0.5s ease-out forwards',
+        'fade-in-up': 'fade-in-up 0.8s ease-out both',
+        'text-reveal': 'text-reveal 1.5s cubic-bezier(0.77, 0, 0.175, 1) 0.5s',
       },
       textShadow: {
-        DEFAULT: '0 2px 4px rgba(0,0,0,0.1)',
-        'md': '0 4px 6px rgba(0,0,0,0.1)',
-        'lg': '0 10px 15px rgba(0,0,0,0.1)',
-        'xl': '0 20px 25px rgba(0,0,0,0.1)',
-        'funky': '2px 2px 0px hsl(var(--accent)), 4px 4px 0px hsl(var(--primary) / 0.5)',
-        'none': 'none',
+        glow: '0 0 20px hsl(var(--primary) / 0.5), 0 0 30px hsl(var(--accent) / 0.5)',
       },
     },
   },
